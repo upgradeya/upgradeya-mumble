@@ -12,10 +12,10 @@ nginx:
   build: containers/nginx
   environment:
     - VIRTUAL_HOST={{PROJECT_NGINX_VIRTUAL_HOST}}
-  log_driver: {{PROJECT_DOCKER_LOG_DRIVER}}
 {{#PROJECT_LETSENCRYPT}}
     - LETSENCRYPT_HOST={{PROJECT_NGINX_PROXY_VIRTUAL_HOSTS}}
     - LETSENCRYPT_EMAIL={{PROJECT_LETSENCRYPT_EMAIL}}
 {{/PROJECT_LETSENCRYPT}}
+  log_driver: {{PROJECT_DOCKER_LOG_DRIVER}}
 
 # vi: set tabstop=2 expandtab syntax=yaml:
