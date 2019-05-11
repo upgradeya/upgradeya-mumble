@@ -1,5 +1,5 @@
 murmur:
-  image: luzifer/mumble
+  image: dmp1ce/mumble
   ports:
     - "64738:64738"
     - "64738:64738/udp"
